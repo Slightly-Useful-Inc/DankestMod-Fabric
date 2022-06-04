@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "dankestmod:item/purple_cum_sock"
+  }
+}
