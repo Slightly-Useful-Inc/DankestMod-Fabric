@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "dankestmod",
   "version": "${version}",
 
-  "name": "Example Mod",
+  "name": "DankestMod",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
-    "Me!"
+    "SkilzMastr"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/Slightly-Useful-Inc/DankestMod-Fabric",
+    "sources": "https://github.com/Slightly-Useful-Inc/DankestMod-Fabric"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "GPL-3",
+  "icon": "assets/dankestmod/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "com.slightlyuseful.DankestMod.Main"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "dankestmod.mixins.json"
   ],
 
   "depends": {
