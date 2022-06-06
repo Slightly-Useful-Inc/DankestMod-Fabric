@@ -34,7 +34,32 @@ public class Main implements ModInitializer {
 			.statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 3000,98), 1)
 			.build())
 		.fireproof()
-		.rarity(Rarity.EPIC));
+		.rarity(Rarity.EPIC)
+	);
+	
+	public static final Item SUNNY_SIDE_UP_EGG = new Item(new FabricItemSettings()
+		.maxCount(16)
+		.food(new FoodComponent.Builder()
+			.hunger(8)
+			.saturationModifier(12.8f)
+			.statusEffect(new StatusEffectInstance(StatusEffects.SPEED,600,2),1)
+			.alwaysEdible()
+			.build()
+		)
+		.rarity(Rarity.UNCOMMON)
+	);
+
+	public static final Item EMERALD_EGG = new Item(new FabricItemSettings()
+		.maxCount(16)
+		.food(new FoodComponent.Builder()
+			.hunger(8)
+			.saturationModifier(12.8f)
+			.statusEffect(new StatusEffectInstance(StatusEffects.HERO_OF_THE_VILLAGE,12000,2),1)
+			.alwaysEdible()
+			.build()
+		)
+		.rarity(Rarity.RARE)
+	);
 	
 
 	public static final Item BLACK_SOCK = new Item(new FabricItemSettings().maxCount(2));
@@ -78,6 +103,8 @@ public class Main implements ModInitializer {
 			stacks.add(new ItemStack(GREEN_SOCK));
 			stacks.add(new ItemStack(RED_SOCK));
 			stacks.add(new ItemStack(GRAPHITE));
+			stacks.add(new ItemStack(SUNNY_SIDE_UP_EGG));
+			stacks.add(new ItemStack(EMERALD_EGG));
 		})
 		.build();
 
@@ -111,6 +138,9 @@ public class Main implements ModInitializer {
 
 		Registry.register(Registry.ITEM, new Identifier("dankestmod", "graphite"), GRAPHITE);
 
+		Registry.register(Registry.ITEM, new Identifier("dankestmod", "sunny_side_up_egg"), SUNNY_SIDE_UP_EGG);
+		Registry.register(Registry.ITEM, new Identifier("dankestmod", "emerald_egg"), EMERALD_EGG);
+		RegisterItems.register();
 
 		CompostingChanceRegistry.INSTANCE.add(CUM, (float) 300);
 		LOGGER.info("DankestMod initialized.");
