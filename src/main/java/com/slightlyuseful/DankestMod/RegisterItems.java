@@ -2,12 +2,16 @@ package com.slightlyuseful.DankestMod;
 
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.block.Material;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -67,6 +71,9 @@ public class RegisterItems {
 	public static ToolItem CUM_AXE = new CustomAxe(CumTools.INSTANCE, 20.0F, 20F, new FabricItemSettings().group(DANKEST_GROUP));
 	public static ToolItem CUM_HOE = new CustomHoe(CumTools.INSTANCE, 4, 3.2F, new FabricItemSettings().group(DANKEST_GROUP));
 	
+
+	public static final Block CUM_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(99999999999999999999.0f).requiresTool());
+
 	public static final Item SUNNY_SIDE_UP_EGG = new Item(new FabricItemSettings()
 		.maxCount(16)
 		.food(new FoodComponent.Builder()
@@ -113,6 +120,7 @@ public class RegisterItems {
 
 
 	public static final Item GRAPHITE = new Item(new FabricItemSettings().group(DANKEST_GROUP));
+	public static final Block GRAPHITE_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).hardness(5.0f).resistance(6.0f).requiresTool());
     public static final ArmorMaterial GRAPHITE_ARMOR = new GraphiteArmor();
     public static final Item GRAPHITE_HELMET = new ArmorItem(GRAPHITE_ARMOR, EquipmentSlot.HEAD, new FabricItemSettings().group(DANKEST_GROUP));
     public static final Item GRAPHITE_CHESTPLATE = new ArmorItem(GRAPHITE_ARMOR, EquipmentSlot.CHEST, new FabricItemSettings().group(DANKEST_GROUP));
@@ -133,6 +141,13 @@ public class RegisterItems {
         Registry.register(Registry.ITEM, new Identifier("dankestmod", "cum_icon"), CUM_ICON);
         Registry.register(Registry.ITEM, new Identifier("dankestmod", "cum"), CUM);
         CompostingChanceRegistry.INSTANCE.add(CUM, (float) 300);
+
+
+
+		Registry.register(Registry.BLOCK, new Identifier("dankestmod", "cum_block"), CUM_BLOCK);
+		Registry.register(Registry.ITEM, new Identifier("dankestmod", "cum_block"), new BlockItem(CUM_BLOCK, new FabricItemSettings().fireproof().group(DANKEST_GROUP)));
+
+
 		Registry.register(Registry.ITEM, new Identifier("dankestmod", "cum_helmet"), CUM_HELMET);
         Registry.register(Registry.ITEM, new Identifier("dankestmod", "cum_chestplate"), CUM_CHESTPLATE);
         Registry.register(Registry.ITEM, new Identifier("dankestmod", "cum_leggings"), CUM_LEGGINGS);
@@ -161,6 +176,8 @@ public class RegisterItems {
 		Registry.register(Registry.ITEM, new Identifier("dankestmod", "red_sock"), RED_SOCK);
 
 		Registry.register(Registry.ITEM, new Identifier("dankestmod", "graphite"), GRAPHITE);
+		Registry.register(Registry.BLOCK, new Identifier("dankestmod", "graphite_block"), GRAPHITE_BLOCK);
+		Registry.register(Registry.ITEM, new Identifier("dankestmod", "graphite_block"), new BlockItem(GRAPHITE_BLOCK, new FabricItemSettings().group(DANKEST_GROUP)));
         Registry.register(Registry.ITEM, new Identifier("dankestmod", "graphite_helmet"), GRAPHITE_HELMET);
         Registry.register(Registry.ITEM, new Identifier("dankestmod", "graphite_chestplate"), GRAPHITE_CHESTPLATE);
         Registry.register(Registry.ITEM, new Identifier("dankestmod", "graphite_leggings"), GRAPHITE_LEGGINGS);

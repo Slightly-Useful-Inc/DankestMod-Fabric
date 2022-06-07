@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dankestmod:block/anime_body_pillow"
+  }
+}
