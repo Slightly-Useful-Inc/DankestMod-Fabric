@@ -20,6 +20,7 @@ import net.minecraft.util.registry.Registry;
 
 import com.slightlyuseful.DankestMod.Armor.CumArmor;
 import com.slightlyuseful.DankestMod.Armor.GraphiteArmor;
+import com.slightlyuseful.DankestMod.Tools.CumTools;
 import com.slightlyuseful.DankestMod.Tools.CustomAxe;
 import com.slightlyuseful.DankestMod.Tools.CustomHoe;
 import com.slightlyuseful.DankestMod.Tools.CustomPickaxe;
@@ -51,11 +52,20 @@ public class RegisterItems {
 	);
 
 
+	
+
+
 	public static final ArmorMaterial CUM_ARMOR = new CumArmor();
     public static final Item CUM_HELMET = new ArmorItem(CUM_ARMOR, EquipmentSlot.HEAD, new FabricItemSettings().group(DANKEST_GROUP));
     public static final Item CUM_CHESTPLATE = new ArmorItem(CUM_ARMOR, EquipmentSlot.CHEST, new FabricItemSettings().group(DANKEST_GROUP));
     public static final Item CUM_LEGGINGS = new ArmorItem(CUM_ARMOR, EquipmentSlot.LEGS, new FabricItemSettings().group(DANKEST_GROUP));
     public static final Item CUM_BOOTS = new ArmorItem(CUM_ARMOR, EquipmentSlot.FEET, new FabricItemSettings().group(DANKEST_GROUP));
+
+	public static ToolItem CUM_SHOVEL = new ShovelItem(CumTools.INSTANCE, 3.0F, 3.0F, new FabricItemSettings().group(DANKEST_GROUP));
+	public static ToolItem CUM_SWORD = new ShovelItem(CumTools.INSTANCE, 6, 10F, new FabricItemSettings().group(DANKEST_GROUP));
+	public static ToolItem CUM_PICKAXE = new CustomPickaxe(CumTools.INSTANCE, 10, 2.8F, new FabricItemSettings().group(DANKEST_GROUP));
+	public static ToolItem CUM_AXE = new CustomAxe(CumTools.INSTANCE, 20.0F, 20F, new FabricItemSettings().group(DANKEST_GROUP));
+	public static ToolItem CUM_HOE = new CustomHoe(CumTools.INSTANCE, 4, 3.2F, new FabricItemSettings().group(DANKEST_GROUP));
 	
 	public static final Item SUNNY_SIDE_UP_EGG = new Item(new FabricItemSettings()
 		.maxCount(16)
@@ -127,7 +137,11 @@ public class RegisterItems {
         Registry.register(Registry.ITEM, new Identifier("dankestmod", "cum_chestplate"), CUM_CHESTPLATE);
         Registry.register(Registry.ITEM, new Identifier("dankestmod", "cum_leggings"), CUM_LEGGINGS);
         Registry.register(Registry.ITEM, new Identifier("dankestmod", "cum_boots"), CUM_BOOTS);
-
+		Registry.register(Registry.ITEM, new Identifier("dankestmod", "cum_sword"), CUM_SWORD);
+		Registry.register(Registry.ITEM, new Identifier("dankestmod", "cum_pickaxe"), CUM_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier("dankestmod", "cum_shovel"), CUM_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier("dankestmod", "cum_hoe"), CUM_HOE);
+		Registry.register(Registry.ITEM, new Identifier("dankestmod", "cum_axe"), CUM_AXE);
 
 		Registry.register(Registry.ITEM, new Identifier("dankestmod", "black_sock"), BLACK_SOCK);
 		Registry.register(Registry.ITEM, new Identifier("dankestmod", "white_sock"), WHITE_SOCK);
