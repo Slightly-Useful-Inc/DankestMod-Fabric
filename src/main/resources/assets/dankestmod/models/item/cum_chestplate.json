@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "dankestmod:item/cum_chest_plate"
+    "layer0": "dankestmod:item/cum_chestplate"
   }
 }

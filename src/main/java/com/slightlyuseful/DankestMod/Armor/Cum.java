@@ -9,14 +9,14 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 
 
-public class Graphite implements ArmorMaterial{
+public class Cum implements ArmorMaterial{
     
     private static final int[] BASE_DURABILITY = new int[] {11,16,15,13};
-    private static final int[] PROTECTION_VALUES = new int[] {3,8,6,3};
+    private static final int[] PROTECTION_VALUES = new int[] {6,16,12,6};
 
     @Override
     public int getDurability(EquipmentSlot slot) {
-        return BASE_DURABILITY[slot.getEntitySlotId()] * 7;
+        return BASE_DURABILITY[slot.getEntitySlotId()] * 40;
     }
 
     @Override
@@ -26,27 +26,27 @@ public class Graphite implements ArmorMaterial{
 
     @Override
     public int getEnchantability(){
-        return 25;
+        return 50;
     }
 
     @Override
     public SoundEvent getEquipSound() {
-        return SoundEvents.ITEM_ARMOR_EQUIP_IRON;
+        return SoundEvents.ITEM_BUCKET_EMPTY;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(RegisterItems.GRAPHITE);
+        return Ingredient.ofItems(RegisterItems.CUM);
     }
 
     @Override
     public String getName() {
-        return "graphite";
+        return "cum";
     }
 
     @Override
     public float getToughness() {
-        return 0F;
+        return 10F;
     }
 
     @Override
