@@ -12,12 +12,18 @@ import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ShovelItem;
+import net.minecraft.item.ToolItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
-import com.slightlyuseful.DankestMod.Armor.Cum;
-import com.slightlyuseful.DankestMod.Armor.Graphite;
+import com.slightlyuseful.DankestMod.Armor.CumArmor;
+import com.slightlyuseful.DankestMod.Armor.GraphiteArmor;
+import com.slightlyuseful.DankestMod.Tools.CustomAxe;
+import com.slightlyuseful.DankestMod.Tools.CustomHoe;
+import com.slightlyuseful.DankestMod.Tools.CustomPickaxe;
+import com.slightlyuseful.DankestMod.Tools.GraphiteTools;
 
 public class RegisterItems {
     
@@ -45,7 +51,7 @@ public class RegisterItems {
 	);
 
 
-	public static final ArmorMaterial CUM_ARMOR = new Cum();
+	public static final ArmorMaterial CUM_ARMOR = new CumArmor();
     public static final Item CUM_HELMET = new ArmorItem(CUM_ARMOR, EquipmentSlot.HEAD, new FabricItemSettings().group(DANKEST_GROUP));
     public static final Item CUM_CHESTPLATE = new ArmorItem(CUM_ARMOR, EquipmentSlot.CHEST, new FabricItemSettings().group(DANKEST_GROUP));
     public static final Item CUM_LEGGINGS = new ArmorItem(CUM_ARMOR, EquipmentSlot.LEGS, new FabricItemSettings().group(DANKEST_GROUP));
@@ -97,11 +103,17 @@ public class RegisterItems {
 
 
 	public static final Item GRAPHITE = new Item(new FabricItemSettings().group(DANKEST_GROUP));
-    public static final ArmorMaterial GRAPHITE_ARMOR = new Graphite();
+    public static final ArmorMaterial GRAPHITE_ARMOR = new GraphiteArmor();
     public static final Item GRAPHITE_HELMET = new ArmorItem(GRAPHITE_ARMOR, EquipmentSlot.HEAD, new FabricItemSettings().group(DANKEST_GROUP));
     public static final Item GRAPHITE_CHESTPLATE = new ArmorItem(GRAPHITE_ARMOR, EquipmentSlot.CHEST, new FabricItemSettings().group(DANKEST_GROUP));
     public static final Item GRAPHITE_LEGGINGS = new ArmorItem(GRAPHITE_ARMOR, EquipmentSlot.LEGS, new FabricItemSettings().group(DANKEST_GROUP));
     public static final Item GRAPHITE_BOOTS = new ArmorItem(GRAPHITE_ARMOR, EquipmentSlot.FEET, new FabricItemSettings().group(DANKEST_GROUP));
+
+	public static ToolItem GRAPHITE_SHOVEL = new ShovelItem(GraphiteTools.INSTANCE, 1.5F, -3.0F, new FabricItemSettings().group(DANKEST_GROUP));
+	public static ToolItem GRAPHITE_SWORD = new ShovelItem(GraphiteTools.INSTANCE, 3, 5F, new FabricItemSettings().group(DANKEST_GROUP));
+	public static ToolItem GRAPHITE_PICKAXE = new CustomPickaxe(GraphiteTools.INSTANCE, 1, -2.8F, new FabricItemSettings().group(DANKEST_GROUP));
+	public static ToolItem GRAPHITE_AXE = new CustomAxe(GraphiteTools.INSTANCE, 10.0F, 10F, new FabricItemSettings().group(DANKEST_GROUP));
+	public static ToolItem GRAPHITE_HOE = new CustomHoe(GraphiteTools.INSTANCE, -2, -3.2F, new FabricItemSettings().group(DANKEST_GROUP));
     
 
 
@@ -139,6 +151,11 @@ public class RegisterItems {
         Registry.register(Registry.ITEM, new Identifier("dankestmod", "graphite_chestplate"), GRAPHITE_CHESTPLATE);
         Registry.register(Registry.ITEM, new Identifier("dankestmod", "graphite_leggings"), GRAPHITE_LEGGINGS);
         Registry.register(Registry.ITEM, new Identifier("dankestmod", "graphite_boots"), GRAPHITE_BOOTS);
+		Registry.register(Registry.ITEM, new Identifier("dankestmod", "graphite_sword"), GRAPHITE_SWORD);
+		Registry.register(Registry.ITEM, new Identifier("dankestmod", "graphite_pickaxe"), GRAPHITE_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier("dankestmod", "graphite_shovel"), GRAPHITE_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier("dankestmod", "graphite_hoe"), GRAPHITE_HOE);
+		Registry.register(Registry.ITEM, new Identifier("dankestmod", "graphite_axe"), GRAPHITE_AXE);
 
 		Registry.register(Registry.ITEM, new Identifier("dankestmod", "sunny_side_up_egg"), SUNNY_SIDE_UP_EGG);
 		Registry.register(Registry.ITEM, new Identifier("dankestmod", "emerald_egg"), EMERALD_EGG);

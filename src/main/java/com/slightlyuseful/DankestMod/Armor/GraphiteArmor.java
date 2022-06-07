@@ -9,7 +9,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 
 
-public class Graphite implements ArmorMaterial{
+public class GraphiteArmor implements ArmorMaterial{
     
     private static final int[] BASE_DURABILITY = new int[] {11,16,15,13};
     private static final int[] PROTECTION_VALUES = new int[] {3,8,6,3};
