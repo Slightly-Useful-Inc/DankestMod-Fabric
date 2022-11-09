@@ -56,5 +56,10 @@
   "item.dankestmod.fleshlight": "Fleshlight",
   "block.dankestmod.chromosome_ore": "Chromosome Ore",
   "itemGroup.dankestmod.items": "DankestMod",
-  "item.dankestmod.cum_sword": "Cum Sword"
+  "item.dankestmod.cum_sword": "Cum Sword",
+  "item.dankestmod.cum_axe": "Cum Axe",
+  "item.dankestmod.cum_pickaxe": "Cum Pickaxe",
+  "item.dankestmod.cum_hoe": "Cum Hoe",
+  "item.dankestmod.cum_shovel": "Cum Shovel",
+  "item.dankestmod.chicken_sandwich": "Chicken Sandwich"
 }

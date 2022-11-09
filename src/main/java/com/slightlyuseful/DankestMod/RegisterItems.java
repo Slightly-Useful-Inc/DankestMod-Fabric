@@ -99,6 +99,15 @@ public class RegisterItems {
 		.rarity(Rarity.RARE)
 		.group(DANKEST_GROUP)
 	);
+
+	public static final Item CHICKEN_SANDWICH = new Item(new FabricItemSettings()
+		.food(new FoodComponent.Builder()
+			.hunger(11)
+			.saturationModifier(6.0f)
+			.build()
+		)
+		.group(DANKEST_GROUP)
+	);
 	
 
 	public static final Item BLACK_SOCK = new Item(new FabricItemSettings().maxCount(2).group(DANKEST_GROUP));
@@ -190,6 +199,7 @@ public class RegisterItems {
 
 		Registry.register(Registry.ITEM, new Identifier("dankestmod", "sunny_side_up_egg"), SUNNY_SIDE_UP_EGG);
 		Registry.register(Registry.ITEM, new Identifier("dankestmod", "emerald_egg"), EMERALD_EGG);
+		Registry.register(Registry.ITEM, new Identifier("dankestmod", "chicken_sandwich"), CHICKEN_SANDWICH);
         
         
         
