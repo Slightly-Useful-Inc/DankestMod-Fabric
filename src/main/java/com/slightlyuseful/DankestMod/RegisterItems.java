@@ -12,6 +12,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.BowItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -26,6 +27,7 @@ import com.slightlyuseful.DankestMod.Armor.CumArmor;
 import com.slightlyuseful.DankestMod.Armor.GraphiteArmor;
 import com.slightlyuseful.DankestMod.Tools.CumTools;
 import com.slightlyuseful.DankestMod.Tools.CustomAxe;
+import com.slightlyuseful.DankestMod.Tools.CustomBow;
 import com.slightlyuseful.DankestMod.Tools.CustomHoe;
 import com.slightlyuseful.DankestMod.Tools.CustomPickaxe;
 import com.slightlyuseful.DankestMod.Tools.GraphiteTools;
@@ -141,6 +143,8 @@ public class RegisterItems {
 	public static ToolItem GRAPHITE_PICKAXE = new CustomPickaxe(GraphiteTools.INSTANCE, 1, -2.8F, new FabricItemSettings().group(DANKEST_GROUP));
 	public static ToolItem GRAPHITE_AXE = new CustomAxe(GraphiteTools.INSTANCE, 10.0F, 10F, new FabricItemSettings().group(DANKEST_GROUP));
 	public static ToolItem GRAPHITE_HOE = new CustomHoe(GraphiteTools.INSTANCE, -2, -3.2F, new FabricItemSettings().group(DANKEST_GROUP));
+	
+	public static BowItem LONGBOW = new CustomBow(new FabricItemSettings().group(DANKEST_GROUP));
     
 
 
@@ -196,6 +200,7 @@ public class RegisterItems {
 		Registry.register(Registry.ITEM, new Identifier("dankestmod", "graphite_shovel"), GRAPHITE_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("dankestmod", "graphite_hoe"), GRAPHITE_HOE);
 		Registry.register(Registry.ITEM, new Identifier("dankestmod", "graphite_axe"), GRAPHITE_AXE);
+		Registry.register(Registry.ITEM, new Identifier("dankestmod", "longbow"), LONGBOW);
 
 		Registry.register(Registry.ITEM, new Identifier("dankestmod", "sunny_side_up_egg"), SUNNY_SIDE_UP_EGG);
 		Registry.register(Registry.ITEM, new Identifier("dankestmod", "emerald_egg"), EMERALD_EGG);

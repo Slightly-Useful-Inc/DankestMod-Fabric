@@ -1,16 +1,17 @@
 {
   "schemaVersion": 1,
   "id": "dankestmod",
-  "version": "${version}",
+  "version": "1.0.0",
 
   "name": "DankestMod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "The Dankest Fabric Mod Ever!",
   "authors": [
     "SkilzMastr"
   ],
   "contact": {
     "homepage": "https://github.com/Slightly-Useful-Inc/DankestMod-Fabric",
-    "sources": "https://github.com/Slightly-Useful-Inc/DankestMod-Fabric"
+    "sources": "https://github.com/Slightly-Useful-Inc/DankestMod-Fabric",
+    "issues": "https://github.com/Slightly-Useful-Inc/DankestMod-Fabric/issues"
   },
 
   "license": "GPL-3",
